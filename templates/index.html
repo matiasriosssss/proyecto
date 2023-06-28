@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}">
+ <meta name="viewport" content="initial-scale=1, width=device-width">
+ <title>Colegio San Miguel</title>
+ <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilosIndex.css')}}">  
+ 
+</head>
+<body>
+<header>
+   <h2>Bienvenidos <br> Colegio San Miguel</h2>
+</header>
+<section>
+ <form action='http://127.0.0.1:5000/Ingreso' method="post">
+    <h1>Ingreso</h1>
+    <label for = "usuario">Usuario</label><br>
+    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario..."> <br><br>
+    <label for = "contraseña">Contraseña</label><br>
+    <input type="password" name="contraseña" placeholder="Ingrese contraseña..."> <br>
+    <br>
+    <button type="submit">Iniciar Sesion</button>
+ </form>
+ 
+</section>
+<footer>
+   <p>Direccion: Lionel Messi 2022 (Sur) <br> Telefono: 2966-61-9950</p>
+</footer>
+</body>
+</html>

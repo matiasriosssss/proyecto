@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estiloserror.css')}}">
+        <title>Colegio San Miguel</title> 
+        
+       </head>
+       <body>
+            <header>
+            <h1>Colegio San Miguel</h1>
+            <h3>Informe detallado</h3>
+            </header>
+         {% for i in range (n) %}
+            <h4> {{lista[i].nombre }} {{ lista[i].apellido }} </h4>
+            <p> Clases de aula: Presentes: {{ pa[i] }} | Ausentes Justificados: {{ aaj[i] }} | Ausentes Injustificados: {{ aai[i] }} <br>
+                 Clases educacion fisica: Presentes: {{ pef[i] }} | Ausentes Justificados: {{ aefj[i] }} | Ausentes Injustificados: {{ aefi[i] }} 
+                 <br> Ausentes Totales: {{ totalA[i] }} <br>
+            </p>
+        {% endfor %}
+        </body>
+</html>

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+   }
+   html, body{
+    height: 100%;
+   }
+   body {
+    font-family: Verdana;
+    background: linear-gradient(#85C1E9, #21618C);
+    
+   }
+   header {
+    
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+   }
+ 
+   article, form {
+    color: white;
+    float: left;
+    text-align: center;
+    font-family: Verdana;
+    width: 100%;
+
+   } 
+   input{
+    padding: 7px;
+    width: 220px;
+    border-radius: 10px;
+   }
+   button{
+    width: 150px;
+    padding: 7px;
+    background-color: #2874A6;
+    border-radius: 10px;
+    color: white;
+   }
+   footer {
+    font-family: Verdana;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 400px;
+   }
+   

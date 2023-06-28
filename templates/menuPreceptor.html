@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilosmenu.css')}}">
+        <title>Colegio San Miguel</title> 
+        
+       </head>
+       <body>
+        <header>
+            <h1>Colegio San Miguel</h1>
+            <h3>Bienvenido preceptor/a {{nombre}} {{apellido}}</h3>
+            <h4>Menu</h4>
+         </header>
+         <ul>
+            <a href="{{url_for('RegistrarAsistencia')}}">Registrar Asistencia</a> <br><br>
+            <a href="{{url_for('consultarCurso')}}">Informe con detalles</a>
+         </ul>
+        </body>
+</html>

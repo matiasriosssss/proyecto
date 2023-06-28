@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estilosListaAlumnos.css')}}">
+        <title>Colegio San Miguel</title> 
+        
+       </head>
+       <body>
+        <header>
+            <h1>Colegio San Miguel</h1>
+            <h3>Lista Alumnos</h3>
+         </header>
+         <form action='http://127.0.0.1:5000/AsistenciaGuardada' method="post">
+         {% for alumno in lista %}
+         <h4> {{ alumno.apellido }}  {{ alumno.nombre }} </h4>
+         <input type="hidden" name= "alumno_id[]" value="{{ alumno.id }}">
+         <label for="tipoDeClase">Tipo de clase:</label>
+         <select id="tipoDeClase" name="tipo[]">
+             <option value="1">Aula</option>
+             <option value="2">Educacion Fisica</option>
+         </select> 
+         &nbsp &nbsp &nbsp &nbsp
+         <label for="asistio">Asistio:</label>
+         <select id="asistio" name="asistio[]">
+             <option value="s">Si</option>
+             <option value="n">No</option>
+         </select>
+         &nbsp &nbsp &nbsp &nbsp
+         <label for="justificacion:">Justificacion:</label>
+         <textarea id="justificacion" name="justificacion[]"></textarea>
+         <br>
+        {% endfor %}
+        <br><br>
+        <input type="submit" value="Guardad Asistencias">
+        </form>
+        </body>
+</html>

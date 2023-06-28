@@ -1,0 +1,30 @@
+html, body{
+    height: 100%;
+}
+
+body {
+    font-family: Verdana;
+    font-weight: center;
+    text-align: center;
+    background: linear-gradient(#85C1E9, #21618C);
+    color: #FFFFFF;
+    
+   }
+header{
+    color:#FFFFFF
+}
+label {
+    vertical-align: top;
+    color: #FFFFFF;
+}
+
+textarea{
+    resize: none;
+    width: 100px;
+    height: 15px;
+}
+select{
+    width: 100px;
+    height: 20px;
+    vertical-align: top;
+}

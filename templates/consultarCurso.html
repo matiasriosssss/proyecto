@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="{{url_for('static',filename='img/logo.png')}}">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/estiloserror.css')}}">
+        <title>Colegio San Miguel</title> 
+        
+       </head>
+       <body>
+        <header>
+            <h1>Colegio San Miguel</h1>
+            <h2>Registrar Asistencia</h2>
+         </header>
+         <h3>Por favor seleccione el curso</h3>
+         <form action='http://127.0.0.1:5000/ListaAlumnos' method="post">
+            <select name="Opcion">
+                {% for curso in cursosPreceptor %}
+                    <option value="{{ curso.id }}">Año: {{ curso.anio }} Division: {{curso.division}}</option>
+                {% endfor %}
+            </select>
+            <input type='submit' value="Seleccionar">
+        </form>
+        </body>
+</html>
